@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        MAVEN_HOME = 'C:\\apache-maven\\apache-maven-3.9.9' // Adjust to your Maven installation path
+        MAVEN_HOME = 'C:\\apache-maven\\apache-maven-3.9.9\\apache-maven-3.9.9' // Correct Maven installation path
         JAVA_HOME = 'C:\\Program Files\\Java\\jdk-21' // Adjust to your Java JDK path
     }
 
@@ -16,7 +16,8 @@ pipeline {
         stage('Build with Maven') {
             steps {
                 script {
-                    bat "'${MAVEN_HOME}\\bin\\mvn' clean install"
+                    // Correct way to invoke Maven with Windows path syntax
+                    bat "\"${MAVEN_HOME}\\bin\\mvn\" clean install"
                 }
             }
         }
