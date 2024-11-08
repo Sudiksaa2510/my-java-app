@@ -5,7 +5,7 @@ FROM openjdk:21-jdk-slim
 WORKDIR /app
 
 # Copy the Maven build output (your JAR file) into the container
-COPY target/my-java-app.jar /app/my-java-app.jar
+COPY target/my-java-app-1.0-SNAPSHOT.jar /app/my-java-app.jar
 
 # Expose the port your app will run on (adjust if different)
 EXPOSE 8080
