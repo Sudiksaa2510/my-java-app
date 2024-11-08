@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git branch: 'master', url: 'https://github.com/yourusername/my-java-app.git'
+                git branch: 'master', url: 'https://github.com/Sudiksaa2510/my-java-app.git' // Updated GitHub URL
             }
         }
 
